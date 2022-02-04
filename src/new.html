@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+
+<form>
+    <label>
+        Enter the length: <input type="number" id="numb1"> mtr</label>
+<br>
+<br>
+<label>
+  <input type="radio" name="coffee" value="cream">hours to min<br>
+  <input type="radio" name="coffee" value="sugar">hours ot second<br>
+  <br>
+  <input type="button" onclick="myFunction()" value="convert">
+  <br><br>
+  <input type="text" id="order" size="50">
+  
+</form>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("numb1").value;
+  var coffee = document.forms[0];
+  var i;
+  for (i = 0; i < coffee.length; i++) {
+    if (coffee[i].checked) {
+        var min;  
+      min =60*x;
+    document.getElementById("order").value = min;
+    }
+    
+        var second;
+        second =60*60*x;
+        document.getElementById("order").value = second;
+
+  }
+  
+}
+</script>
+
+</body>
+</html>
